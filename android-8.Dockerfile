@@ -28,7 +28,8 @@ RUN apt-get install -y \
     xsltproc \
     unzip \
     python \
-    openjdk-7-jdk
+    openjdk-7-jdk \
+    bc
 
 RUN curl -o jdk8.tgz https://android.googlesource.com/platform/prebuilts/jdk/jdk8/+archive/master.tar.gz \
     && tar -zxf jdk8.tgz linux-x86 \
