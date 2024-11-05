@@ -24,8 +24,6 @@ docker run \
     --user $USER_ID:$GROUP_ID \
     --volume $FOLDER:/src \
     --workdir /src \
-    --add-host=host.docker.internal:host-gateway \
-    --env "ANDROID_ADB_SERVER_ADDRESS=host.docker.internal" \
     --rm \
     -it \
     $MACHINE
