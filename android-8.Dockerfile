@@ -36,8 +36,5 @@ RUN curl -o jdk8.tgz https://android.googlesource.com/platform/prebuilts/jdk/jdk
     && mv linux-x86 /usr/lib/jvm/java-8-openjdk-amd64 \
     && rm -rf jdk8.tgz
 
-RUN groupadd -g ${GROUP_ID} ${USER}
-RUN useradd -m -u ${USER_ID} -g ${USER} ${USER}
-
 ENV HOME=/home/${USER}
 ENV USER=${USER}

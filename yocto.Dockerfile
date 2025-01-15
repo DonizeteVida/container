@@ -36,8 +36,5 @@ RUN apt-get install -y \
 
 RUN locale-gen en_US.UTF-8
 
-RUN groupadd -g ${GROUP_ID} ${USER}
-RUN useradd -m -u ${USER_ID} -g ${USER} ${USER}
-
 ENV HOME=/home/${USER}
 ENV USER=${USER}
