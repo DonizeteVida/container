@@ -23,6 +23,8 @@ podman build \
 podman run \
     --userns=keep-id \
     --volume $(pwd):$(pwd) \
+    --volume /tmp/.X11-unix:/tmp/.X11-unix \
+    --env DISPLAY=$DISPLAY \
     --workdir $(pwd) \
     --rm \
     -it \

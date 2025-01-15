@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ARG USER
 ARG USER_ID
@@ -8,31 +8,31 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
 RUN apt-get install -y \
-    gawk \
-    wget \
-    git \
-    diffstat \
-    unzip \
-    texinfo \
-    gcc \
     build-essential \
     chrpath \
-    socat \
     cpio \
-    python3 \
-    python3-pip \
-    python3-pexpect \
-    xz-utils \
     debianutils \
+    diffstat \
+    file \
+    gawk \
+    gcc \
+    git \
     iputils-ping \
+    libacl1 \
+    liblz4-tool \
+    locales \
+    python3 \
     python3-git \
     python3-jinja2 \
+    python3-pexpect \
+    python3-pip \
     python3-subunit \
-    zstd \
-    liblz4-tool \
-    file \
-    locales \
-    libacl1
+    socat \
+    texinfo \
+    unzip \
+    wget \
+    xz-utils \
+    zstd
 
 RUN locale-gen en_US.UTF-8
 
